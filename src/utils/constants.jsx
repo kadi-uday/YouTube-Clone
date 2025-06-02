@@ -1,0 +1,1 @@
+export const USER_ICON_URL = 'https://www.citypng.com/public/uploads/preview/white-user-member-guest-icon-png-image-701751695037005zdurfaim0y.png';
