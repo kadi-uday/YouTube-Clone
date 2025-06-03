@@ -1,8 +1,26 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import { YOUTUBE_VIDEOS_API } from '../utils/constants';
+import VideoCard from './VideoCard';
+import { Link } from 'react-router-dom';
 
 const VideoContainer = () => {
+
+  const [videos, setVideos] = useState([]);
+  
+  useEffect(() => {
+    getVideos();
+  },[]);
+
+  const getVideos = async () => {
+    const data = await fetch(YOUTUBE_VIDEOS_API);
+    const json = await data.json();
+    setVideos(json.items);
+  }
+  
   return (
-    <div>VideoContainer</div>
+    <div className='bg-[#0f0f0f] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 px-1' >
+      {videos.map((video) => (<Link to={"/watch?v="+ video.id} key={video.id}> <VideoCard  info={video} /> </Link>))}
+    </div>
   )
 }
 

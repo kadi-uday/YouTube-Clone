@@ -1,3 +1,5 @@
+import aspectRatio from '@tailwindcss/aspect-ratio';
+
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
@@ -5,7 +7,23 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      aspectRatio,
+    },
   },
-  plugins: [],
+  plugins: [
+       function ({ addUtilities }) {
+      addUtilities({
+        '.scrollbar-hide': {
+          /* Firefox */
+          'scrollbar-width': 'none',
+          /* IE and Edge */
+          '-ms-overflow-style': 'none',
+        },
+        '.scrollbar-hide::-webkit-scrollbar': {
+          display: 'none',
+        },
+      });
+    },
+  ],
 }
