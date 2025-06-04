@@ -3,7 +3,6 @@ import useChannelIcon from '../utils/useChannelIcon';
 
 const VideoCard = ({info}) => {
 
-    console.log(info);
     const {snippet , statistics} = info;
     const {channelId, channelTitle, title, thumbnails} = snippet;
     const iconUrl = useChannelIcon(channelId);
@@ -25,8 +24,8 @@ const VideoCard = ({info}) => {
       <h3 className="font-semibold text-sm leading-snug line-clamp-2 lg:text-2xl">
         {title}
       </h3>
-      <p className="text-xs text-gray-400 mt-1">{channelTitle}</p>
-      <p className="text-xs text-gray-400">
+      <p className="text-xs text-gray-400 mt-1 lg:text-xl">{channelTitle}</p>
+      <p className="text-xs text-gray-400 lg:text-xl">
         {Number(statistics.viewCount).toLocaleString()} views
       </p>
     </div>
