@@ -1,4 +1,5 @@
 import aspectRatio from '@tailwindcss/aspect-ratio';
+import scrollbar from 'tailwind-scrollbar';
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -9,10 +10,16 @@ export default {
   theme: {
     extend: {
       aspectRatio,
+      scrollbar: {
+        width: "8px",
+        track: "transparent",
+        thumb: "#6b7280",
+        radius: "8px",
+      },
     },
   },
   plugins: [
-       function ({ addUtilities }) {
+    function ({ addUtilities }) {
       addUtilities({
         '.scrollbar-hide': {
           /* Firefox */
@@ -25,5 +32,6 @@ export default {
         },
       });
     },
+    scrollbar,
   ],
 }
