@@ -78,6 +78,17 @@ npm run start
 
 ## Important Note
 
-To use this application, you need to have your own Google API Key. Make sure to set these keys in your environment variables or configuration files before running the app locally or deploying it.
+To use this application, you need to have your own Google API Key. Make sure to set these keys in your environment variables or configuration files before running the app locally or deploying it. For better UI experience in Desktop or Laptop kepp your browse page at 67%.
 
 ---
+
+## Live Demo
+
+Check out the live demo of this project here:
+[YouTube-Clone](https://youtube-yt-clone-react.netlify.app/)
+
+---
+
+## Contributing
+
+Contributions are welcome! If you find any issues or have suggestions for improvements, please feel free to open an issue or submit a pull request.
