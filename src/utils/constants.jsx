@@ -1,6 +1,6 @@
 export  const list = ['All', 'Music' , 'Gaming', 'Live', 'Cricket', 'Application Software', 'Smartphones', 'Mantras', 'Indian Cuisines', 'Mobile Games', 'Gardening', 'Recently uploaded', 'Watched', 'New to you'];
 
-export const GOOGLE_API_KEY = "AIzaSyCSOutKZcGnZmdYAGFbT-8EsKJdYj1b6vE";
+export const GOOGLE_API_KEY = import.meta.env.VITE_GOOGLE_API_KEY;
 
 export const LIVE_CHAT_COUNT = 25;
 
