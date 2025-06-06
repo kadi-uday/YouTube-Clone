@@ -9,7 +9,7 @@ const SideBar = () => {
   if(!isMenuOpen) return null;
 
   return (
-   <div className={`bg-[#0f0f0f] text-white w-56 md:w-60 p-4 lg:w-96 lg:z-50 lg:pt-10 text-sm space-y-3 overflow-y-auto sidebar-scrollbar-hide fixed top-20 left-0 h-[calc(100vh-5rem)] z-50 transform transition-transform duration-300 ease-in-out ${isMenuOpen ? 'translate-x-0' : '-translate-x-full'} lg:relative lg:translate-x-0 lg:h-auto lg:overflow-visible lg:block`}>
+   <div className={`bg-[#0f0f0f] text-white w-56 md:w-60 p-4 lg:w-96 lg:z-50 lg:pt-10 text-sm space-y-3 sidebar-scrollbar-hide fixed top-20 left-0 h-[calc(100vh-5rem)] z-50 transform transition-transform duration-700 ease-in-out overflow-y-auto overscroll-contain ${isMenuOpen ? 'translate-x-0' : '-translate-x-full'} lg:fixed lg:translate-x-0 lg:h-auto lg:overflow-visible lg:block`}>
           
     <ul className="space-y-1 lg:space-y-2 lg:text-2xl">
       <li className="flex items-center gap-2 px-3 py-3 hover:bg-[#272727] rounded-md cursor-pointer"><Link to='/'>Home</Link></li>
